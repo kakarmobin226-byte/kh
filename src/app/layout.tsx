@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HERONS - Precision and Elegance",
-  description: "Official website of HERONS. Building the future with precision.",
+  title: "STRIDEX | Complete Shoe Website",
+  description:
+    "Shop premium shoes for running, lifestyle, and trails. Responsive single-page shoe website by STRIDEX.",
 };
 
 export default function RootLayout({
@@ -29,11 +30,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white dark:bg-black text-zinc-950 dark:text-zinc-50">
+      <body className="min-h-full bg-white text-zinc-950">
         <Navbar />
-        <main className="flex-1 flex flex-col">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
