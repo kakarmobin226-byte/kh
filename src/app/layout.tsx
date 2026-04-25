@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HERONS - Precision and Elegance",
-  description: "Official website of HERONS. Building the future with precision.",
+  title: "StrideVault — Premium Shoes for Everyday Motion",
+  description:
+    "A complete shoe landing page with featured products, benefits, customer testimonials, and contact support.",
 };
 
 export default function RootLayout({
@@ -25,15 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-white dark:bg-black text-zinc-950 dark:text-zinc-50">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <body className="min-h-full bg-white font-sans text-zinc-900">
         <Navbar />
-        <main className="flex-1 flex flex-col">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

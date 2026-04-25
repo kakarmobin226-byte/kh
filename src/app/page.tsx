@@ -1,67 +1,243 @@
-import { ArrowRight, Bird, Zap, Shield, Globe } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  ShieldCheck,
+  Sparkles,
+  TimerReset,
+  Truck,
+} from "lucide-react";
+
+const featuredShoes = [
+  {
+    name: "AeroSprint Pro",
+    type: "Road Running",
+    price: "$149",
+    description: "Feather-light race trainer with responsive foam and carbon support.",
+    color: "from-sky-200 to-blue-500",
+  },
+  {
+    name: "Urban Drift X",
+    type: "Lifestyle",
+    price: "$129",
+    description: "All-day comfort sneaker designed for city walks and casual style.",
+    color: "from-zinc-200 to-zinc-700",
+  },
+  {
+    name: "PeakTrail Grip",
+    type: "Trail Running",
+    price: "$159",
+    description: "Rugged traction and weather-ready upper built for mixed terrain.",
+    color: "from-emerald-200 to-emerald-600",
+  },
+];
+
+const benefits = [
+  {
+    title: "Performance First",
+    text: "Engineered midsoles and precision fit deliver reliable energy return every step.",
+    icon: Sparkles,
+  },
+  {
+    title: "60-Day Comfort Trial",
+    text: "Wear them in real life. If they are not your perfect pair, send them back.",
+    icon: TimerReset,
+  },
+  {
+    title: "Secure Checkout",
+    text: "Protected payment options and transparent shipping with live order tracking.",
+    icon: ShieldCheck,
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "These became my daily trainers in a week. Lightweight, stable, and surprisingly durable.",
+    name: "Maya R.",
+    role: "Half-Marathon Runner",
+  },
+  {
+    quote:
+      "I bought the Urban Drift X for work and now own two colors. Comfort is unreal.",
+    name: "Jordan L.",
+    role: "Product Designer",
+  },
+  {
+    quote:
+      "PeakTrail Grip handled wet trails better than shoes I paid much more for.",
+    name: "Eli T.",
+    role: "Weekend Trail Hiker",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1">
-      {/* Hero Section */}
-      <section className="px-8 py-24 md:py-32 flex flex-col items-center text-center bg-gradient-to-b from-white to-zinc-50 dark:from-black dark:to-zinc-950">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-widest uppercase mb-6">
-          <Zap className="w-3 h-3" />
-          <span>Next Generation</span>
+    <div className="bg-white text-zinc-900">
+      <section className="mx-auto grid w-full max-w-7xl gap-12 px-5 pb-16 pt-14 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pt-20">
+        <div>
+          <p className="mb-4 inline-flex items-center rounded-full bg-zinc-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-700">
+            New Season Collection
+          </p>
+          <h1 className="max-w-xl text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl lg:text-6xl">
+            Move Better in Shoes Built for Every Day Momentum.
+          </h1>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-600 sm:text-lg">
+            StrideVault blends athletic performance with modern street style. Discover premium
+            shoes for running, commuting, and everything in between.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href="#featured"
+              className="inline-flex items-center rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+            >
+              Shop Featured
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100"
+            >
+              Get Size Help
+            </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-6 text-sm text-zinc-600">
+            <p className="inline-flex items-center gap-2">
+              <Truck className="h-4 w-4 text-zinc-900" /> Free shipping over $75
+            </p>
+            <p className="inline-flex items-center gap-2">
+              <Check className="h-4 w-4 text-zinc-900" /> Easy 60-day returns
+            </p>
+          </div>
         </div>
-        <h1 className="max-w-4xl text-5xl md:text-7xl font-extrabold tracking-tighter text-zinc-950 dark:text-zinc-50 mb-8">
-          Precision Engineering for the <span className="text-blue-600">Modern Web</span>
-        </h1>
-        <p className="max-w-2xl text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-10">
-          HERONS provides cutting-edge solutions for businesses that demand elegance, performance, and scalability. Elevate your digital presence today.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <button className="flex h-12 items-center justify-center gap-2 rounded-full bg-blue-600 px-8 text-white font-medium transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 active:scale-95">
-            Get Started
-            <ArrowRight className="w-4 h-4" />
-          </button>
-          <button className="flex h-12 items-center justify-center px-8 rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-950 dark:text-zinc-50 font-medium transition-all hover:bg-zinc-100 dark:hover:bg-zinc-900 active:scale-95">
-            View Solutions
-          </button>
+
+        <div className="relative">
+          <div className="rounded-3xl border border-zinc-200 bg-gradient-to-br from-zinc-50 via-white to-zinc-100 p-8 shadow-xl shadow-zinc-200/60">
+            <div className="mb-5 flex items-center justify-between text-xs font-medium uppercase tracking-wider text-zinc-500">
+              <span>Limited Drop</span>
+              <span>SS26</span>
+            </div>
+            <div className="flex min-h-[260px] items-center justify-center rounded-2xl bg-gradient-to-tr from-zinc-950 to-zinc-700 p-8">
+              <span className="text-7xl leading-none">👟</span>
+            </div>
+            <div className="mt-6 flex items-center justify-between">
+              <div>
+                <p className="text-sm text-zinc-500">Featured Pair</p>
+                <h3 className="text-xl font-semibold text-zinc-950">Nimbus Flow One</h3>
+              </div>
+              <p className="text-lg font-semibold text-zinc-950">$139</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="px-8 py-24 bg-white dark:bg-black">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50 mb-4">Why Choose HERONS?</h2>
-            <p className="text-zinc-600 dark:text-zinc-400">Our core values drive every pixel and line of code we create.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="flex flex-col gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400">
-                <Bird className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-zinc-950 dark:text-zinc-50">Elegance</h3>
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Clean, intuitive designs that prioritize user experience without compromising on aesthetic beauty.
-              </p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-zinc-50 dark:bg-zinc-900 flex items-center justify-center text-zinc-950 dark:text-zinc-50">
-                <Shield className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-zinc-950 dark:text-zinc-50">Precision</h3>
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Every component is meticulously crafted to ensure maximum performance and bulletproof reliability.
-              </p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-zinc-50 dark:bg-zinc-900 flex items-center justify-center text-zinc-950 dark:text-zinc-50">
-                <Globe className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-zinc-950 dark:text-zinc-50">Global Reach</h3>
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Scale your vision globally with infrastructure designed to handle the demands of the modern internet.
-              </p>
+      <section id="featured" className="border-y border-zinc-200 bg-zinc-50/60 py-16">
+        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+          <div className="mb-10 flex items-end justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Featured Shoes</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-950">Top picks for comfort and speed</h2>
             </div>
           </div>
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {featuredShoes.map((shoe) => (
+              <article
+                key={shoe.name}
+                className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className={`mb-5 flex h-44 items-center justify-center rounded-2xl bg-gradient-to-br ${shoe.color}`}>
+                  <span className="text-5xl">👟</span>
+                </div>
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">{shoe.type}</p>
+                <h3 className="mt-2 text-2xl font-semibold text-zinc-950">{shoe.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-zinc-600">{shoe.description}</p>
+                <div className="mt-6 flex items-center justify-between">
+                  <span className="text-lg font-semibold text-zinc-950">{shoe.price}</span>
+                  <button className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100">
+                    Add to cart
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+        <div className="mb-10 max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Why StrideVault</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-950">
+            Built with premium materials and practical guarantees
+          </h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {benefits.map((benefit) => (
+            <div key={benefit.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <benefit.icon className="h-8 w-8 text-zinc-900" />
+              <h3 className="mt-5 text-xl font-semibold text-zinc-950">{benefit.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-600">{benefit.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="testimonials" className="bg-zinc-950 py-16 text-white">
+        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-300">Testimonials</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight">Loved by runners and everyday movers</h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <figure key={testimonial.name} className="rounded-2xl border border-white/15 bg-white/5 p-6">
+                <blockquote className="text-sm leading-relaxed text-zinc-200">“{testimonial.quote}”</blockquote>
+                <figcaption className="mt-5">
+                  <p className="font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-sm text-zinc-300">{testimonial.role}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+        <div className="rounded-3xl border border-zinc-200 bg-zinc-50 p-8 sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
+          <div className="max-w-xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">Contact</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-950">
+              Need fit advice or bulk orders for your team?
+            </h2>
+            <p className="mt-4 text-zinc-600">
+              Share your shoe size, preferred use, and style goals. Our team will recommend your best
+              match within one business day.
+            </p>
+          </div>
+
+          <form className="mt-8 grid gap-4 sm:grid-cols-2 lg:mt-0 lg:w-[460px]" aria-label="Contact form">
+            <input
+              type="text"
+              placeholder="Full name"
+              className="rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 outline-none ring-zinc-950/20 transition focus:ring"
+            />
+            <input
+              type="email"
+              placeholder="Email address"
+              className="rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 outline-none ring-zinc-950/20 transition focus:ring"
+            />
+            <textarea
+              placeholder="Tell us what you need"
+              className="sm:col-span-2 min-h-28 rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 outline-none ring-zinc-950/20 transition focus:ring"
+            />
+            <button
+              type="button"
+              className="sm:col-span-2 rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+            >
+              Send request
+            </button>
+          </form>
         </div>
       </section>
     </div>
