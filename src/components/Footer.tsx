@@ -1,20 +1,18 @@
-import { Bird } from 'lucide-react';
-
 export default function Footer() {
   return (
-    <footer className="px-8 py-12 bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 mt-auto">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex items-center gap-2">
-          <Bird className="w-6 h-6 text-blue-600" />
-          <span className="text-lg font-bold tracking-tighter text-zinc-950 dark:text-zinc-50 uppercase">HERONS</span>
-        </div>
-        <div className="text-sm text-zinc-500 dark:text-zinc-400">
-          © {new Date().getFullYear()} HERONS. All rights reserved.
-        </div>
-        <div className="flex gap-6 text-sm text-zinc-500 dark:text-zinc-400">
-          <a href="#" className="hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors">Twitter</a>
-          <a href="#" className="hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors">GitHub</a>
-          <a href="#" className="hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors">LinkedIn</a>
+    <footer className="border-t border-zinc-200 bg-white">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-zinc-500 sm:px-8 md:flex-row md:items-center md:justify-between">
+        <p>© {new Date().getFullYear()} StrideVault. Built for better movement.</p>
+        <div className="flex items-center gap-5">
+          <a href="#featured" className="transition hover:text-zinc-900">
+            Shop
+          </a>
+          <a href="#benefits" className="transition hover:text-zinc-900">
+            Benefits
+          </a>
+          <a href="#contact" className="transition hover:text-zinc-900">
+            Contact
+          </a>
         </div>
       </div>
     </footer>

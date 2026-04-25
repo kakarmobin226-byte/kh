@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StrideVault — Shoe Landing Website
 
-## Getting Started
+A complete, responsive one-page shoe website built with Next.js 16 and Tailwind CSS.
 
-First, run the development server:
+## Sections included
+
+- Hero section with clear call-to-actions
+- Featured shoes product grid
+- Benefits/value proposition cards
+- Customer testimonials
+- Contact section
+- Footer with key navigation links
+
+## Local development
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## Deployment (GitHub Pages)
 
-To learn more about Next.js, take a look at the following resources:
+This repository includes a workflow at `.github/workflows/deploy-pages.yml`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- On push to `main` (or `feature/shoe-landing-site`), GitHub Actions builds and deploys the site.
+- The expected live URL is:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`https://kakarmobin226-byte.github.io/kh/`
 
-## Deploy on Vercel
+### If Pages is not enabled yet
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Open repository **Settings → Pages**.
+2. Under **Build and deployment**, select **Source: GitHub Actions**.
+3. Push commits to `main` (or manually run the workflow).
