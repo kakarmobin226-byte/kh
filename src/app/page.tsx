@@ -13,7 +13,7 @@ const featuredShoes = [
     name: "AeroSprint Pro",
     type: "Road Running",
     price: "$149",
-    description: "Feather-light race trainer with responsive foam and carbon support.",
+    description: "Shatter your personal bests with our ultra-lightweight racing shoe. Features carbon-plate technology and high-energy return foam for explosive speed.",
     color: "from-sky-200 to-blue-500",
     image: "/images/aerosprint-pro.png",
   },
@@ -21,7 +21,7 @@ const featuredShoes = [
     name: "Urban Drift X",
     type: "Lifestyle",
     price: "$129",
-    description: "All-day comfort sneaker designed for city walks and casual style.",
+    description: "Elevate your everyday look without sacrificing comfort. Premium materials meet orthotic-grade support for a sneaker you'll never want to take off.",
     color: "from-zinc-200 to-zinc-700",
     image: "/images/urban-drift-x.png",
   },
@@ -29,7 +29,7 @@ const featuredShoes = [
     name: "PeakTrail Grip",
     type: "Trail Running",
     price: "$159",
-    description: "Rugged traction and weather-ready upper built for mixed terrain.",
+    description: "Conquer any terrain with absolute confidence. Boasts maximum durability, aggressive all-weather traction, and advanced foot protection.",
     color: "from-emerald-200 to-emerald-600",
     image: "/images/peaktrail-grip.png",
   },
@@ -56,21 +56,21 @@ const benefits = [
 const testimonials = [
   {
     quote:
-      "These became my daily trainers in a week. Lightweight, stable, and surprisingly durable.",
+      "The AeroSprint Pro completely transformed my stride. I shaved two minutes off my 10K time, and my legs feel fresher than ever. An absolute game-changer for serious runners.",
     name: "Maya R.",
-    role: "Half-Marathon Runner",
+    role: "Elite Marathon Runner",
   },
   {
     quote:
-      "I bought the Urban Drift X for work and now own two colors. Comfort is unreal.",
+      "I'm on my feet 10 hours a day, and the Urban Drift X are the only shoes that keep me pain-free. They look incredibly sharp and feel like walking on clouds. Worth every penny.",
     name: "Jordan L.",
-    role: "Product Designer",
+    role: "Creative Director",
   },
   {
     quote:
-      "PeakTrail Grip handled wet trails better than shoes I paid much more for.",
+      "I put the PeakTrail Grip through hell on a muddy, rocky 15-mile hike. The traction is unbelievable and my feet stayed completely dry. Best trail shoes I've ever owned.",
     name: "Eli T.",
-    role: "Weekend Trail Hiker",
+    role: "Avid Trail Hiker",
   },
 ];
 
@@ -80,14 +80,13 @@ export default function Home() {
       <section className="mx-auto grid w-full max-w-7xl gap-12 px-5 pb-16 pt-14 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pt-20">
         <div>
           <p className="mb-4 inline-flex items-center rounded-full bg-zinc-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-700">
-            New Season Collection
+            Premium Footwear Innovation
           </p>
           <h1 className="max-w-xl text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl lg:text-6xl">
-            Move Better in Shoes Built for Every Day Momentum.
+            Unlock Your True Potential with Next-Gen Performance Shoes.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-600 sm:text-lg">
-            StrideVault blends athletic performance with modern street style. Discover premium
-            shoes for running, commuting, and everything in between.
+            Experience the perfect fusion of elite athletic performance and premium street style. StrideVault engineers cutting-edge running and lifestyle shoes designed for unmatched comfort, speed, and durability.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
