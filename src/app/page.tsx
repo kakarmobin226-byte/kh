@@ -6,6 +6,7 @@ import {
   TimerReset,
   Truck,
 } from "lucide-react";
+import Image from "next/image";
 
 const featuredShoes = [
   {
@@ -14,6 +15,7 @@ const featuredShoes = [
     price: "$149",
     description: "Feather-light race trainer with responsive foam and carbon support.",
     color: "from-sky-200 to-blue-500",
+    image: "/images/aerosprint-pro.png",
   },
   {
     name: "Urban Drift X",
@@ -21,6 +23,7 @@ const featuredShoes = [
     price: "$129",
     description: "All-day comfort sneaker designed for city walks and casual style.",
     color: "from-zinc-200 to-zinc-700",
+    image: "/images/urban-drift-x.png",
   },
   {
     name: "PeakTrail Grip",
@@ -28,6 +31,7 @@ const featuredShoes = [
     price: "$159",
     description: "Rugged traction and weather-ready upper built for mixed terrain.",
     color: "from-emerald-200 to-emerald-600",
+    image: "/images/peaktrail-grip.png",
   },
 ];
 
@@ -118,8 +122,8 @@ export default function Home() {
               <span>Limited Drop</span>
               <span>SS26</span>
             </div>
-            <div className="flex min-h-[260px] items-center justify-center rounded-2xl bg-gradient-to-tr from-zinc-950 to-zinc-700 p-8">
-              <span className="text-7xl leading-none">👟</span>
+            <div className="relative flex min-h-[260px] items-center justify-center rounded-2xl bg-gradient-to-tr from-zinc-950 to-zinc-700 p-8 overflow-hidden">
+              <Image src="/images/nimbus-flow-one.png" alt="Nimbus Flow One" fill className="object-cover" />
             </div>
             <div className="mt-6 flex items-center justify-between">
               <div>
@@ -147,8 +151,8 @@ export default function Home() {
                 key={shoe.name}
                 className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className={`mb-5 flex h-44 items-center justify-center rounded-2xl bg-gradient-to-br ${shoe.color}`}>
-                  <span className="text-5xl">👟</span>
+                <div className={`relative mb-5 flex h-44 items-center justify-center rounded-2xl bg-gradient-to-br ${shoe.color} overflow-hidden`}>
+                  <Image src={shoe.image} alt={shoe.name} fill className="object-cover" />
                 </div>
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">{shoe.type}</p>
                 <h3 className="mt-2 text-2xl font-semibold text-zinc-950">{shoe.name}</h3>
